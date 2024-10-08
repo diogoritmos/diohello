@@ -10,6 +10,10 @@
 
 export default {
 	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
+		// returns Hello + the value of the name query parameter
+		const url = new URL(request.url);
+		const name = url.searchParams.get('name') || 'World';
+
+		return new Response(`Hello ${name}!`);
 	},
 };
