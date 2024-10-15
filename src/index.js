@@ -60,4 +60,8 @@ export default {
 
 		return response;
 	},
+	async scheduled(controller, env, ctx) {
+		console.log('Scheduled event triggered');
+		// Add your scheduled event handling logic here
+	},
 };
